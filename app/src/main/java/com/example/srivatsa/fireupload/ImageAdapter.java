@@ -3,6 +3,7 @@ package com.example.srivatsa.fireupload;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,6 +35,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
     public void onBindViewHolder(ImageViewHolder holder, int position) {
       Upload uploadCurrent=mUploads.get(position);
       holder.textViewName.setText(uploadCurrent.getName());
+        Log.d("Test","url : "+uploadCurrent.getmImageUrl());
         Picasso.with(mContext).load(uploadCurrent.getmImageUrl())
                 .fit()
                 //.placeholder(R.mipmap.ic_launcher)
