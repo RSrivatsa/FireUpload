@@ -43,6 +43,8 @@ public class ImagesActivity extends AppCompatActivity {
                     mUploads.add(upload);
                 }
                 mAdapter=new ImageAdapter(ImagesActivity.this,mUploads);
+
+
                 mRecyclerView.setAdapter(mAdapter);
             }
 
